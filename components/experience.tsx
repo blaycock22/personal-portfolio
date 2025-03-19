@@ -4,16 +4,16 @@ export default function Experience() {
   const experiences = [
     {
       title: "Director",
-      company: "Fan Inc.",
+      company: "Fan inc.",
       period: "June 2023 - Present",
-      location: "Lubbock, Texas, United States",
-      description: "Leading strategic initiatives and product development as Director at Fan Inc.",
+      location: "Lubbock, Texas",
+      description: "Leading strategic initiatives and product development as Director at Fan inc.",
     },
     {
       title: "Product Director",
       company: "Texas Tech Credit Union",
       period: "August 2022 - June 2023",
-      location: "Lubbock, Texas, United States",
+      location: "Lubbock, Texas",
       description:
         "Directed product strategy and implementation, including overseeing the completion of a 30 million dollar credit union merger.",
     },
@@ -21,7 +21,7 @@ export default function Experience() {
       title: "Member Experience Director",
       company: "Texas Tech Credit Union",
       period: "January 2022 - August 2022",
-      location: "Lubbock, Texas, United States",
+      location: "Lubbock, Texas",
       description:
         "Led member experience initiatives, including the implementation of Glia's Digital Customer Service solution to enhance customer interactions across all channels.",
     },
@@ -45,7 +45,7 @@ export default function Experience() {
       title: "Mobile Solutions",
       company: "City Bank",
       period: "July 2009 - September 2015",
-      location: "Lubbock, Texas Area",
+      location: "Lubbock, Texas",
       description:
         "Technologist in the digital banking space. Implementation and ongoing development of mobile products with the understanding of core banking systems. Pioneered mobile card management features, being first to market with the ability to turn debit cards on/off via a mobile device.",
     },

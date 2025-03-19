@@ -6,7 +6,7 @@ import Link from "next/link"
 // Define Project type
 type Project = {
   title: string;
-  period: string;
+  period?: string;
   company: string;
   description: string;
   technologies: string[];
@@ -18,25 +18,22 @@ type Project = {
 export default function Projects() {
   const projects: Project[] = [
     {
-      title: "Fan Inc. NIL Platform Launch",
-      period: "June 2023 - Present",
-      company: "Fan Inc.",
+      title: "Fan inc. NIL Platform Launch",
+      company: "Fan inc.",
       description:
-        "Led the development and launch of Fan Inc., the first-ever NIL-enabled social app exclusively for college athletes to get discovered and earn compensation for their Name, Image, and Likeness.",
-      technologies: ["Mobile App Development", "NIL Technology", "Social Platform", "College Athletics"],
+        "Leading the strategic direction and management of Fan inc., pioneering the first-ever NIL-enabled social platform exclusively for college athletes. Overseeing product development, strategic partnerships, and investor relations while building a revolutionary ecosystem where athletes can monetize their Name, Image, and Likeness through direct fan engagement.",
+      technologies: ["Product Leadership", "NIL Technology", "Social Platform", "College Athletics", "Strategic Partnerships"],
       featured: true,
       link: "https://faninc.com",
     },
     {
-      title: "Credit Union Merger",
-      period: "Sep 2022 - Feb 2023",
+      title: "Credit Union Mergers",
       company: "Texas Tech Credit Union",
-      description: "Project and implementation lead on a 30 million dollar merger.",
+      description: "Project and implementation lead on multiple credit union mergers, including a 30 million dollar acquisition.",
       technologies: ["Project Management", "Financial Services", "Merger & Acquisition"],
     },
     {
       title: "Alkami Digital Banking Conversion",
-      period: "Oct 2021 - Jun 2022",
       company: "Texas Tech Credit Union",
       description:
         "Led the conversion to Alkami's digital banking platform, enhancing online and mobile banking services.",
@@ -44,7 +41,6 @@ export default function Projects() {
     },
     {
       title: "Glia Digital Customer Service Implementation",
-      period: "Jan 2022 - Apr 2022",
       company: "Texas Tech Credit Union",
       description:
         "Implemented Glia's Digital Customer Service solution to bring the in-person experience to all customer interactions - whether they start online or on the phone.",
@@ -52,27 +48,36 @@ export default function Projects() {
     },
     {
       title: "8x8 Contact Center and Work Implementation",
-      period: "Mar 2021 - Jun 2021",
-      company: "Texas Tech Federal Credit Union",
+      company: "Texas Tech Credit Union",
       description:
         "Implemented 8x8's Contact Center and Work software and physical devices, improving communication infrastructure.",
       technologies: ["Contact Center", "VoIP", "Unified Communications"],
     },
     {
       title: "SimpleNexus Mortgage Platform",
-      period: "Feb 2020 - May 2020",
-      company: "Texas Tech Federal Credit Union",
+      company: "Texas Tech Credit Union",
       description:
         "Rolled out the SimpleNexus mortgage platform, including online and mobile applications, disclosures, and other mortgage-related services.",
       technologies: ["Mortgage Services", "Mobile Applications", "Financial Technology"],
     },
     {
       title: "HubSpot Implementation",
-      period: "Feb 2018 - Jul 2018",
-      company: "Texas Tech Federal Credit Union",
+      company: "Texas Tech Credit Union",
       description:
         "Implemented HubSpot CMS, Service, and Marketing, including email automation, custom workflows, surveys, ticketing, and scheduling software.",
       technologies: ["CRM", "Marketing Automation", "Customer Service"],
+    },
+    {
+      title: "Mobile Banking & Digital Wallet Implementation",
+      company: "Texas Tech Credit Union",
+      description: "Led implementation of mobile banking solutions and digital wallet integrations including Apple Pay, Google Pay, and Samsung Pay. Pioneered mobile card management features for controlling debit cards.",
+      technologies: ["Mobile Banking", "Digital Wallets", "Payment Systems", "Card Management"],
+    },
+    {
+      title: "Interactive Teller Machine (iTM) Deployment",
+      company: "Texas Tech Credit Union",
+      description: "Oversaw the implementation of Interactive Teller Machines (iTMs), modernizing the credit union's service channels and enhancing member experiences through innovative banking technology.",
+      technologies: ["Banking Technology", "Service Channel Innovation", "Member Experience", "Hardware Implementation"],
     },
   ]
 
@@ -92,7 +97,7 @@ export default function Projects() {
                   <div className="md:flex">
                     <div className="w-full">
                       <CardHeader>
-                        <div className="flex justify-between items-start">
+                        <div className="text-center">
                           <CardTitle className="text-navy-light text-2xl">
                             {project.link ? (
                               <Link
@@ -106,15 +111,12 @@ export default function Projects() {
                               project.title
                             )}
                           </CardTitle>
-                          <Badge variant="outline" className="bg-navy-light/20 text-navy-lightest border-navy-light/30">
-                            {project.period}
-                          </Badge>
                         </div>
-                        <CardDescription className="text-navy-light">{project.company}</CardDescription>
+                        <CardDescription className="text-navy-light text-center">{project.company}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <p className="text-navy-lightest mb-4">{project.description}</p>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 justify-center">
                           {project.technologies.map((tech, techIndex) => (
                             <Badge
                               key={techIndex}
@@ -143,17 +145,14 @@ export default function Projects() {
                 >
                   <div className="h-2 bg-gradient-to-r from-navy-light to-navy-medium"></div>
                   <CardHeader>
-                    <div className="flex justify-between items-start">
+                    <div className="text-center">
                       <CardTitle className="text-navy-light">{project.title}</CardTitle>
-                      <Badge variant="outline" className="bg-navy-light/20 text-navy-lightest border-navy-light/30">
-                        {project.period}
-                      </Badge>
                     </div>
-                    <CardDescription className="text-navy-light">{project.company}</CardDescription>
+                    <CardDescription className="text-navy-light text-center">{project.company}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-navy-lightest mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 justify-center">
                       {project.technologies.map((tech, techIndex) => (
                         <Badge
                           key={techIndex}

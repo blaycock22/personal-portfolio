@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="flex flex-col items-center md:items-start">
           {/* Content with headshot aligned */}
           <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
-            {/* Headshot - now positioned first */}
+            {/* Headshot - positioned first */}
             <div className="w-40 h-40 md:w-48 md:h-48 relative headshot-border rounded-full overflow-hidden flex-shrink-0">
               <img
                 src="/BenLaycockHeadshot.png"
@@ -19,18 +19,30 @@ export default function Hero() {
               />
             </div>
             
-            {/* Name and title */}
-            <div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                <span className="block text-white">Ben Laycock</span>
-                <span className="block text-navy-light mt-2">Director at Fan Inc.</span>
-              </h1>
+            {/* Name, title and about section in a flex container */}
+            <div className="flex flex-col md:flex-row gap-6">
+              {/* Name and title */}
+              <div>
+                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                  <span className="block text-white">Ben Laycock</span>
+                  <span className="block text-navy-light mt-2">Director at Fan inc.</span>
+                </h1>
+              </div>
+              
+              {/* About summary - only visible on medium screens and up */}
+              <div className="hidden md:block max-w-md border-l border-navy-light pl-6">
+                <p className="text-lg text-navy-lightest">
+                  Fintech leader with 15 years of experience driving digital transformation, product innovation, and scalable financial solutions.
+                </p>
+              </div>
             </div>
           </div>
           
-          <p className="mt-4 text-lg text-navy-lightest max-w-2xl text-center md:text-left">
-            Financial technology leader with expertise in product management and digital transformation.
-          </p>
+          {/* About summary - visible only on mobile */}
+          <div className="md:hidden mt-4 text-lg text-navy-lightest max-w-2xl text-center">
+            Fintech leader with 15 years of experience driving digital transformation, product innovation, and scalable financial solutions.
+          </div>
+          
           <div className="mt-8">
             <Button asChild className="rounded-full bg-navy-light hover:bg-navy-medium text-navy-dark">
               <Link href="https://www.linkedin.com/in/ben-laycock/" target="_blank">
